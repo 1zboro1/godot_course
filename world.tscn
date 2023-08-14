@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbp8ki6175pqt"]
+
+[ext_resource type="PackedScene" uid="uid://bsmq0qxgx8ksb" path="res://Player/Player.tscn" id="1_fn8y6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_taxxj"]
+size = Vector2(749.407, 47.6785)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpb4m"]
+size = Vector2(96.2581, 135.196)
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_fn8y6")]
+position = Vector2(343, 287)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576.126, 468)
+scale = Vector2(1.53688, -3.25453)
+shape = SubResource("RectangleShape2D_taxxj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-73.9684, 220)
+scale = Vector2(1.53688, -3.25453)
+shape = SubResource("RectangleShape2D_jpb4m")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1227, 220)
+scale = Vector2(1.53688, -3.25453)
+shape = SubResource("RectangleShape2D_jpb4m")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = 392.0
+offset_right = 125.0
+offset_bottom = 413.0
+scale = Vector2(9.24743, 2.99136)
